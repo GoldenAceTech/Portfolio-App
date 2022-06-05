@@ -40,7 +40,7 @@
       </ul>
     </nav>
 
-    <main class="main"> {% block main %}{% endblock %} </main>
+    <main class="main main__{{title.casefold()}}"> {% block main %}{% endblock %} </main>
 
     <footer class="page-footer">
       <p> © {{year}} Afolabi</p>
