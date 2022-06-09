@@ -1,0 +1,9 @@
+{% extends "layout/base.html" %}
+{% block main %}
+<section class="error-page__info">
+    <p class="error-page__name">Page {{ error.name }}</p>
+    <h1 class="error-page__code">{{ error.code }}</h1>
+    <p class="error-page__description">{{ error.description }}</p>
+    <a href="/" class="home-link">Go home</a>
+</section>
+{% endblock %}

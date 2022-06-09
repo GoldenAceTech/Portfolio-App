@@ -1,11 +1,11 @@
 {% extends 'layout/base.html'%}
 {% block main %}
 {% for project in projects%}
-    <a href="/{{ project['slug'] }}" class="project-link">
+    <a href="{{ url_for('projects.project', slug=project['slug']) }}" class="project-link">
         <article class="card">
            <img src="{{ url_for('static', filename=project['thumb']) }}" alt="{{ project['name'] }} hero image">
            <div class="card-body">
-               <p class="project-technologies">
+               <p class="project-categories">
                    {% for category in project['categories'] %}
                    <span class="category">{{ category.upper() }}</span>
                    {% endfor %}

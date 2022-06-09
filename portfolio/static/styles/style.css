@@ -9,6 +9,8 @@
   vertical-align: baseline;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
+  color: inherit;
 }
 
 :root {
@@ -32,7 +34,7 @@ body {
 }
 
 .navbar {
-  width: 90%;
+  width: 80%;
   max-width: 500px;
   margin: 1rem auto;
 }
@@ -47,7 +49,6 @@ body {
 .nav-link {
   font-weight: 600;
   font-size: 1.05rem;
-  color: inherit;
   opacity: 0.5;
   padding: 0.2rem;
   position: relative;
@@ -80,6 +81,7 @@ body {
   margin: 1rem auto;
   padding: 0.5rem 1rem;
   display: grid;
+  gap: 1rem;
   line-height: 1.5;
 }
 
@@ -87,13 +89,12 @@ body {
   margin: 1.5rem auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  gap: 1rem;
 }
 
 .project-link {
-  color: inherit;
   display: block;
   height: min-content;
+  margin-bottom: 1.5rem;
 }
 
 .card {
@@ -112,20 +113,20 @@ body {
   margin: 0.5rem 0;
 }
 
-.project-technologies {
+.project-categories {
   color: var(--primary-color);
   letter-spacing: 2px;
 }
 
-.project-technologies > .category {
+.project-categories > .category {
   padding: 0 1rem;
 }
 
-.project-technologies > .category:not(:last-of-type) {
+.project-categories > .category:not(:last-of-type) {
   border-right: 2px solid var(--primary-color);
 }
 
-.project-name {
+.card-body .project-name {
   padding: 0 1rem;
   text-align: justify;
   font-size: 1.2rem;
@@ -144,24 +145,126 @@ body {
   max-width: 600px;
   font-weight: 500;
   text-align: justify;
-  gap: 1rem;
   grid-auto-rows: min-content;
 }
 
 .main__contact {
-  gap: 1rem;
   grid-auto-rows: min-content;
   max-width: max-content;
 }
 
 a.contact-link {
-  color: inherit;
   border-bottom: 2px solid var(--primary-color);
   font-weight: 500;
 }
 
 a.contact-link:hover {
   color: var(--primary-color);
+}
+
+.project-hero-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.project-details {
+  display: grid;
+  margin: 0 auto;
+  gap: 1.5rem;
+  grid-template-columns: 1fr auto;
+}
+
+.project-description{
+  width: 100%;
+  max-width: 900px;
+  text-align: justify;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-description .project-name {
+  font-size: 1.5rem;
+}
+
+.project-description p {
+  font-size: 1.05rem;
+}
+
+.aside {
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+  height: max-content;
+  min-width: 300px;
+  padding-top: 0.5rem;
+}
+
+.aside div {
+  padding: 1rem;
+  background-color: rgba(76, 175, 218, 0.2);
+  border-radius: 0.5rem;
+}
+.aside div ul {
+  padding: 0.5rem 1rem;
+}
+
+.aside div ul li::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../img/check.svg');
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.project-prod-link a {
+  text-decoration: underline;
+}
+
+.project-prod-link a:hover {
+  color: var(--primary-color);
+}
+
+.project-prod-link a::before {
+  content: "";
+  display: inline-block;
+  background-image: url('../img/mouse-click.svg');
+  background-size: cover;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.error-page__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.error-page__name {
+  font-size: 2rem;
+}
+
+.error-page__code {
+  font-size: 6rem;
+}
+
+.error-page__description {
+  font-size: 1.25rem;
+}
+
+.error-page__info .home-link {
+  display: inline-block;
+  text-decoration: underline;
+  color: var(--primary-color);
+  font-size: 1.25rem;
 }
 
 .page-footer {
@@ -172,7 +275,6 @@ a.contact-link:hover {
   color: #fff;
 }
 .page-footer ul {
-  list-style: none;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 1rem;
@@ -192,4 +294,11 @@ a.page-footer__link {
 a.page-footer__link > img {
   width: 100%;
   height: 100%;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .project-details {
+    grid-template-columns: auto;
+  }
 }

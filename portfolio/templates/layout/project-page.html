@@ -1,0 +1,26 @@
+{% extends 'layout/base.html' %}
+{% block main %}
+<img src="{{ url_for('static', filename=project['hero'] ) }}" alt="{{ project['name'] }} hero image" class="project-hero-image">
+<section class="project-details">
+    <article class="project-description">
+        <h1 class="project-name">
+            {{ project['name'] }}
+        </h1>
+        {% block content %}{% endblock %}
+    </article>
+    <aside class="aside">
+        <div class="technologies">
+            <h3>Technologies used</h3>
+            <ul role="list">
+                {% for technology in project['technologies'] %}
+                <li>{{ technology }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="project-prod-link">
+            <a href="{{ project['prod'] }}"><b>View in production</b></a>
+        </div>
+    </aside>
+</section>
+
+{% endblock %}
