@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
@@ -45,7 +45,7 @@ body {
 }
 
 .nav-link {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.05rem;
   opacity: 0.5;
   padding: 0.2rem;
@@ -141,7 +141,7 @@ body {
 
 .main__about {
   max-width: 600px;
-  font-weight: 500;
+  font-size: 1.05rem;
   text-align: justify;
   grid-auto-rows: min-content;
 }
@@ -153,7 +153,7 @@ body {
 
 a.contact-link {
   border-bottom: 2px solid var(--primary-color);
-  font-weight: 500;
+  font-size: 1.05rem;
 }
 
 a.contact-link:hover {
