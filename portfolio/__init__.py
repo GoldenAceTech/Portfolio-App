@@ -1,5 +1,8 @@
 from flask import Flask, render_template
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def create_app(test_config=None):
     app = Flask(__name__)

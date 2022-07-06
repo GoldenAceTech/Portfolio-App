@@ -38,9 +38,9 @@ projects = {
         "hero": "img/movie-watchlist-hero.jpg",
         "technologies": ["Python", "HTML", "CSS", "PostgreSQL"],
         "prod": "https://ace-movie-watchlist.herokuapp.com/",
-        "description": {
+        "description": [
             "This is a flask app that helps users save and set reminders for their favorite movies. Users can save movies they have watched or yet to watch. Users can also check out the movies other users are watching and rate other users movies or even their own movies. A user can delete or update the details of a movie they added.", "Building this app strengthen my SQL skills. I used SQL syntax and functions such as JOINS, VIEWS, UPSERT, CONSTRAINTS etc.", "I also for the first made a dark view of a web app. I learned how to apply the dark view properties, how to store user preference in local storage so that the user choice stays persistent unless changed. Check it out in production."
-        }
+        ]
     },
 }
 
