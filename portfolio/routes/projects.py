@@ -37,5 +37,4 @@ projects = {
 def project(slug):
     if slug not in projects:
         abort(404)
-    project = projects[slug]
-    return render_template(f"pages/projects/{slug}.html", title=f"{slug}", project=project)
+    return render_template(f"pages/projects/{slug}.html", title=f"{slug}", project=projects[slug])
