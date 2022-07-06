@@ -6,7 +6,9 @@
         <h1 class="project-name">
             {{ project['name'] }}
         </h1>
-        {% block content %}{% endblock %}
+        {%for paragraph in project['description']%}
+        <p>{{ paragraph }}</p>
+        {%endfor%}
     </article>
     <aside class="aside">
         <div class="technologies">
